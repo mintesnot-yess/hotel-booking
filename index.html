@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-sans bg-gray-900 text-gray-200">
+
+    <!-- Header -->
+    <header class="bg-gray-800 text-white p-6 fixed w-full top-0 z-10">
+        <div class="container mx-auto flex flex-row justify-between items-center">
+            <h1 class="text-3xl font-bold">Hotel Name</h1>
+
+            <nav class="hidden md:block">
+                <ul class="flex flex-row space-x-6">
+                    <li><a href="#home" class="hover:text-gray-400">Home</a></li>
+                    <li><a href="#rooms" class="hover:text-gray-400">Rooms</a></li>
+                    <li><a href="#booking" class="hover:text-gray-400">Booking</a></li>
+                </ul>
+            </nav>
+            <button title="ds" class="md:hidden text-white focus:outline-none" id="menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hotel Preview Section -->
+    <section id="home" class="h-screen bg-cover  bg-center text-center flex items-center justify-center"
+        style="background:linear-gradient(#00000077,#00000077), url('ho5.jpg') center/cover no-repeat; ">
+        <div class="container mx-auto">
+            <h2 class="text-6xl font-bold mb-4 text-white">Welcome to Hotel Name</h2>
+            <p class="text-2xl text-gray-300 mb-6">Experience luxury and comfort in the heart of the city.</p>
+        </div>
+    </section>
+
+    <!-- Room Selection -->
+    <section id="rooms" class="py-16 bg-gray-800">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-white">Our Rooms</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md">
+                    <img src="https://ak-d.tripcdn.com/images/20050b0000005l0o6F7B8_R_339_206_R5_D.jpg" alt="Room 1"
+                        class="w-full h-40 object-cover rounded-t-lg">
+                    <h3 class="text-2xl font-semibold mt-4 text-white">DeName Suite</h3>
+                    <p class="text-gray-400 mb-4">A luxurious room with all modern amenities.</p>
+                    <p class="text-lg font-semibold text-blue-400">$250 per night</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md">
+                    <img src="https://ak-d.tripcdn.com/images/200f050000000xr6vA7BD_R_339_206_R5_D.jpg" alt="Room 2"
+                        class="w-full h-40 object-cover rounded-t-lg">
+                    <h3 class="text-2xl font-semibold mt-4 text-white">Ocean View Room</h3>
+                    <p class="text-gray-400 mb-4">Enjoy the stunning ocean view from your room.</p>
+                    <p class="text-lg font-semibold text-blue-400">$180 per night</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md">
+                    <img src="https://ak-d.tripcdn.com/images/200k160000010lv8m8FB6_R_339_206_R5_D.jpg" alt="Room 3"
+                        class="w-full h-40 object-cover rounded-t-lg">
+                    <h3 class="text-2xl font-semibold mt-4 text-white">Standard Room</h3>
+                    <p class="text-gray-400 mb-4">A cozy room perfect for a short stay.</p>
+                    <p class="text-lg font-semibold text-blue-400">$120 per night</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-16 bg-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-white">Our Facilities</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <img src="https://example.com/spa.jpg" alt="Spa" class="w-full h-40 object-cover rounded-t-lg">
+                    <h3 class="text-2xl font-semibold mt-4 text-white">Spa & Wellness</h3>
+                    <p class="text-gray-400 mb-4">Relax and rejuvenate with our world-class spa services.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <img src="https://example.com/pool.jpg" alt="Swimming Pool"
+                        class="w-full h-40 object-cover rounded-t-lg">
+                    <h3 class="text-2xl font-semibold mt-4 text-white">Swimming Pool</h3>
+                    <p class="text-gray-400 mb-4">Enjoy a refreshing swim in our outdoor pool.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <img src="https://example.com/gym.jpg" alt="Gym" class="w-full h-40 object-cover rounded-t-lg">
+                    <h3 class="text-2xl font-semibold mt-4 text-white">Fitness Center</h3>
+                    <p class="text-gray-400 mb-4">Stay fit and healthy with our state-of-the-art gym facilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="py-16 bg-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-white">Our Amenities</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-400" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5h18M3 10h18M3 15h18M3 20h18"></path>
+                    </svg>
+                    <h3 class="text-2xl font-semibold mt-4 text-white">Free Wi-Fi</h3>
+                    <p class="text-gray-400 mb-4">Stay connected with our complimentary high-speed internet.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-400" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 11h14M5 15h14M5 19h14M5 7h14"></path>
+                    </svg>
+                    <h3 class="text-2xl font-semibold mt-4 text-white">Free Parking</h3>
+                    <p class="text-gray-400 mb-4">Convenient and secure parking available for all guests.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                    <svg class="w-16 h-16 mx-auto mb-4 text-blue-400" fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 11h14M5 15h14M5 19h14M5 7h14">
+                        </path>
+                    </svg>
+                    <h3 class="text-2xl font-semibold mt-4 text-white">Complimentary Breakfast</h3>
+                    <p class="text-gray-400 mb-4">Start your day with a delicious and healthy breakfast.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" class="py-16 bg-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-white">Book Your Stay</h2>
+            <form class="max-w-xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <label for="name" class="block text-left text-lg font-semibold text-gray-300">Name</label>
+                    <input type="text" id="name"
+                        class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-white"
+                        placeholder="Enter your name">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-left text-lg font-semibold text-gray-300">Email</label>
+                    <input type="email" id="email"
+                        class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-white"
+                        placeholder="Enter your email">
+                </div>
+                <div class="mb-4">
+                    <label for="room" class="block text-left text-lg font-semibold text-gray-300">Select Room</label>
+                    <select id="room" class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-white">
+                        <option value="deName">DeName Suite</option>
+                        <option value="ocean">Ocean View Room</option>
+                        <option value="standard">Standard Room</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="guests" class="block text-left text-lg font-semibold text-gray-300">Number of
+                        Guests</label>
+                    <input type="number" id="guests" min="1" max="10"
+                        class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-white"
+                        placeholder="Enter number of guests">
+                </div>
+                <div class="mb-4">
+                    <label for="checkin" class="block text-left text-lg font-semibold text-gray-300">Check-in
+                        Date</label>
+                    <input type="date" id="checkin"
+                        class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-white">
+                </div>
+                <div class="mb-4">
+                    <label for="checkout" class="block text-left text-lg font-semibold text-gray-300">Check-out
+                        Date</label>
+                    <input type="date" id="checkout"
+                        class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-white">
+                </div>
+                <button type="submit" class="w-full p-3 bg-blue-600 text-white rounded-md">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <div class="container mx-auto text-center"></div>
+        <p>&copy; 2025 Hotel Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
